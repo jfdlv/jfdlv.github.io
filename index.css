@@ -1,0 +1,33 @@
+.intro-bio-container {
+  margin-top: 10px;
+}
+
+img {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.nav {
+  padding-top: 20px;
+}
+
+.information {
+  margin-top:10px;
+}
+
+.my-experience { 
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.profile-container {
+  padding: 10px;
+}
+
+#projectsContainer{
+  display: none;
+}
