@@ -28,24 +28,31 @@ window.onload = () => {
         document.getElementById("pacmen-info").style.display = "none";
         document.getElementById("eye-exercise-info").style.display = "none";
         document.getElementById("bus-tracking-info").style.display = "none";
+        document.getElementById("circles-in-motion-info").style.display = "none";
         document.getElementById("dnd5-bestiary-info").style.display = "none";
         document.getElementById("troika-pdf-info").style.display = "none";
       }
       item.setAttribute("class","list-group-item active")
-      if(item.getAttribute("name") === "pacmen") {
-        document.getElementById("pacmen-info").style.display = "block";
-      }
-      if(item.getAttribute("name") === "eye-excersice"){
-        document.getElementById("eye-exercise-info").style.display = "block";
-      }
-      if(item.getAttribute("name") === "bus-tracking"){
-        document.getElementById("bus-tracking-info").style.display = "block";
-      }
-      if(item.getAttribute("name") === "dnd5-bestiary"){
-        document.getElementById("dnd5-bestiary-info").style.display = "block";
-      }
-      if(item.getAttribute("name") === "troika-pdf-generator"){
-        document.getElementById("troika-pdf-info").style.display = "block";
+      let name = item.getAttribute("name");
+      switch (name) {
+        case "pacmen":
+          document.getElementById("pacmen-info").style.display = "block";
+          break;
+        case "eye-excersice":
+          document.getElementById("eye-exercise-info").style.display = "block";
+          break;
+        case "bus-tracking":
+          document.getElementById("bus-tracking-info").style.display = "block";
+          break;
+        case "circles-in-motion":
+          document.getElementById("circles-in-motion-info").style.display = "block";
+          break;
+        case "dnd5-bestiary":
+          document.getElementById("dnd5-bestiary-info").style.display = "block";
+          break;
+        case "troika-pdf-generator":
+          document.getElementById("troika-pdf-info").style.display = "block";
+          break;
       }
     }
   }
