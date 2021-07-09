@@ -31,3 +31,61 @@ a {
 #projectsContainer{
   display: none;
 }
+
+/* I got this "nav" styles and the color palette from this snippet https://bootsnipp.com/snippets/X2GEX */
+.nav-item::after{
+  content:'';
+  display:block;
+  width:0px;
+  height:4px;
+  background:#ff0000;
+  transition: 0.2s;
+  margin-top:-9px;
+}
+
+.nav-item:hover::after{width:100%;}
+
+
+.nav-link{padding:15px 5px;transition:0.2s;}
+
+.navbar {
+  padding: 15px;
+}
+
+.navbar.navbar-light.bg-light {
+  background-color: white !important;
+  border-bottom: solid 5px #ed4137;
+  font-weight: bold;
+}
+
+.navbar-nav{
+  gap: 5px;
+}
+
+.navbar-nav .nav-link {
+  color:#000;
+  font-weight:bold;
+  font-size:18px;
+}
+
+.navbar-nav .active > .nav-link{
+  width:100%;
+  height:51px;
+  border-bottom: .25rem solid transparent;
+  border-bottom-color: #ed4137;
+ 
+}
+
+.list-group-item.active {
+  background-color: #ed4137;
+  border-color: #ed4137;
+  font-weight: bold;
+}
+
+.card-title {
+  border-width: 0px 0px 5px 0px;
+  border-image-source: linear-gradient(to left, transparent 50%, #ed4137 50%);
+  border-image-slice: 1;
+  border-bottom: solid #ed4137;
+  padding-bottom: 5px;
+}

@@ -4,11 +4,12 @@ window.onload = () => {
       item.onclick = function(event) {
         console.log(event);
         for (let insideItem of list) {
-          insideItem.setAttribute("class", "nav-link");
+          insideItem.parentElement.setAttribute("class", "nav-item");
           document.getElementById("bioContainer").style.display = "none";
           document.getElementById("projectsContainer").style.display = "none";
         }
-        item.setAttribute("class","nav-link active")
+        console.log(item.parentElement);
+        item.parentElement.setAttribute("class","active");
         console.log(item.name);
         if(item.name === "bio") {
           document.getElementById("bioContainer").style.display = "block";
