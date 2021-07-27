@@ -84,8 +84,6 @@ a {
 
 .card-title {
   border-width: 0px 0px 5px 0px;
-  border-image-source: linear-gradient(to left, transparent 50%, #ed4137 50%);
-  border-image-slice: 1;
   border-bottom: solid #ed4137;
   padding-bottom: 5px;
 }
