@@ -72,18 +72,18 @@ a {
   width:100%;
   height:51px;
   border-bottom: .25rem solid transparent;
-  border-bottom-color: #ed4137;
+  border-bottom-color: #ed4137 !important;
  
 }
 
 .list-group-item.active {
-  background-color: #ed4137;
-  border-color: #ed4137;
+  background-color: #ed4137 !important;
+  border-color: #ed4137 !important;
   font-weight: bold;
 }
 
 .card-title {
   border-width: 0px 0px 5px 0px;
-  border-bottom: solid #ed4137;
+  border-bottom: solid #ed4137 !important;
   padding-bottom: 5px;
 }
