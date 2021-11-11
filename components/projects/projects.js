@@ -42,12 +42,12 @@ function Projects(){
           {projects.map((element,index) => {
             console.log(index);
             if(index === currentProjectIndex) {
-              return <ReactBootstrap.ListGroup.Item action onClick={()=>{setCurrentProject(projects[index]);setCurrentProjectIndex(index)}} active>
+              return <ReactBootstrap.ListGroup.Item action onClick={()=>{setCurrentProject(projects[index]);setCurrentProjectIndex(index)}} active key={index}>
                 {element.name}
               </ReactBootstrap.ListGroup.Item>
             }
             else {
-              return <ReactBootstrap.ListGroup.Item action onClick={()=>{setCurrentProject(projects[index]);setCurrentProjectIndex(index)}}>
+              return <ReactBootstrap.ListGroup.Item action onClick={()=>{setCurrentProject(projects[index]);setCurrentProjectIndex(index)}} key={index}>
                 {element.name}
               </ReactBootstrap.ListGroup.Item>
             }
