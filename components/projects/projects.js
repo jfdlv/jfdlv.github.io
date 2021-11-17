@@ -29,35 +29,41 @@ function Projects(){
     name: 'Troika PDF creator',
     description: 'Small React project to make the creation process of characters in troika rpg quicker. It generates a pdf file so that the user can print it and use it to play.This is an initial feature, the plan is to make a whole toolkit for game masters of this game.',
     link: 'https://github.com/jfdlv/troika-pdf-creator'
+  },{
+    name: 'BadBank',
+    description: 'Project that emulates how a withdraw and deposit works on a bank. It has a login that you need to use before you can use the withdraw and deposit features, the credentials that can be used are placed on the All Data tab.',
+    link: 'https://github.com/jfdlv/badbank',
+    liveDemoLink: 'https://fernando-delaviabankingapplication.s3.us-east-2.amazonaws.com/index.html#/'
   }];
 
   const [currentProject, setCurrentProject] = React.useState(projects[0]);
 
   const [currentProjectIndex, setCurrentProjectIndex] = React.useState(0);
 
-  return <ReactBootstrap.Container>
-    <ReactBootstrap.Row>
-      <ReactBootstrap.Col>
-        <ReactBootstrap.ListGroup>
+  const {Container, Row, Col, ListGroup} = ReactBootstrap;
+
+  return <Container>
+    <Row>
+      <Col>
+        <ListGroup>
           {projects.map((element,index) => {
             console.log(index);
             if(index === currentProjectIndex) {
-              return <ReactBootstrap.ListGroup.Item action onClick={()=>{setCurrentProject(projects[index]);setCurrentProjectIndex(index)}} active key={index}>
+              return <ListGroup.Item action onClick={()=>{setCurrentProject(projects[index]);setCurrentProjectIndex(index)}} active key={index}>
                 {element.name}
-              </ReactBootstrap.ListGroup.Item>
+              </ListGroup.Item>
             }
             else {
-              return <ReactBootstrap.ListGroup.Item action onClick={()=>{setCurrentProject(projects[index]);setCurrentProjectIndex(index)}} key={index}>
+              return <ListGroup.Item action onClick={()=>{setCurrentProject(projects[index]);setCurrentProjectIndex(index)}} key={index}>
                 {element.name}
-              </ReactBootstrap.ListGroup.Item>
+              </ListGroup.Item>
             }
           })}
-        </ReactBootstrap.ListGroup>
-      </ReactBootstrap.Col>
-      <ReactBootstrap.Col>
+        </ListGroup>
+      </Col>
+      <Col>
         <ProjectCard name={currentProject.name} description={currentProject.description} link={currentProject.link} liveDemoLink={currentProject.liveDemoLink}/>  
-      </ReactBootstrap.Col>
-    </ReactBootstrap.Row>
-
-  </ReactBootstrap.Container>
+      </Col>
+    </Row>
+  </Container>
 }

@@ -26,6 +26,8 @@ function NavBar() {
 
     const [hash, setHash] = useHash();
 
+    const {Container} = ReactBootstrap;
+
     React.useEffect(() => {
         setHash('#/bio');
     }, []);
@@ -33,9 +35,9 @@ function NavBar() {
     return (
         <>
             <nav className="navbar navbar-light bg-light">
-                <div className="container">
+                <Container>
                     <a className="navbar-brand" href="#">Julio Fernando De La Via</a>
-                </div>
+                </Container>
             </nav>
             <nav className="navbar navbar-expand-lg">
                 <ul className="navbar-nav">

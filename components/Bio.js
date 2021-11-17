@@ -1,21 +1,26 @@
+
 function Bio() {
-  return <div className="container" id="bioContainer">
-  <div className="row intro-bio-container">
-      <div className="col">
+
+
+  const {Container, Row, Col, Card} = ReactBootstrap;
+
+  return <Container>
+  <Row className="intro-bio-container">
+        <Col>
           <iframe height="500" src="https://www.youtube.com/embed/rWXE095WE-g" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen
           style={{
           width: "80%",
           marginLeft: "10%"}}
           ></iframe>
-      </div>
-      <div className="col">
-          <div className="card">
-              <div className="card-body">
-                  <div className="row">
-                      <div className="col">
+        </Col>
+        <Col>
+          <Card>
+              <Card.Body>
+                  <Row>
+                      <Col>
                           <img src="./IMG_7591.jpg" className="rounded"/>
-                      </div>
-                      <div className="col">
+                      </Col>
+                      <Col>
                           <p className="card-text">
                               I'm a front-end developer currently learning full 
                               stack development with MERN stack.
@@ -24,15 +29,15 @@ function Bio() {
                               <br/>
                               My hobbies are martial arts, comic books, videogames, listening to music and I'm also learning to play bass
                           </p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div className="card information">
-              <div className="card-body">
-                  <h5 className="card-title">Information</h5>
-                  <div className="row">
-                      <div className="col">
+                      </Col>
+                  </Row>
+              </Card.Body>
+          </Card>
+          <Card className="information">
+              <Card.Body>
+                  <Card.Title>Information</Card.Title>
+                  <Row>
+                      <Col>
                           <h6>LinkedIn and Github profiles:</h6>
                           <div className="profile-container"><a href="https://www.linkedin.com/in/fernandodlv35266579/" className="link-info">
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
@@ -48,8 +53,8 @@ function Bio() {
                               &nbsp;
                               Github Profile (jfdlv)
                           </a></div>
-                      </div>
-                      <div className="col">
+                      </Col>
+                      <Col>
                           <h6>Contact Information</h6>
                           <div>
                               <strong>E-mail</strong><a href="mailto: jf.delavia@gmail.com"className="link-primary" style={{marginLeft: "5px"}}>jf.delavia@gmail.com</a>
@@ -57,34 +62,34 @@ function Bio() {
                           <div>
                               <strong>Phone Number</strong><a href="#"className="link-primary" style={{marginLeft: "5px"}}>(591) 73726616</a>
                           </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div className="card my-experience">
-              <div className="card-body">
-                  <h5 className="card-title">My experience</h5>
-                  <div className="row">
-                      <div className="col">
+                      </Col>
+                  </Row>
+              </Card.Body>
+          </Card>
+          <Card className="my-experience">
+              <Card.Body>
+                  <Card.Title>My experience</Card.Title>
+                  <Row>
+                      <Col>
                           <ul>
                               <li>HTML</li>
                               <li>CSS</li>
                               <li>JavaScript</li>
                               <li>Angularjs</li>
                           </ul>
-                      </div>
-                      <div className="col">
+                      </Col>
+                      <Col>
                           <ul>
                               <li>React</li>
                               <li>Extjs</li>
                               <li>jQuery</li>
                               <li>Bootstrap</li>
                           </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
+                      </Col>
+                  </Row>
+              </Card.Body>
+          </Card>
+      </Col>
+  </Row>
+</Container>
 }
